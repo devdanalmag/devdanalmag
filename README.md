@@ -1,4 +1,4 @@
-# Dev Dan Almag | Web & Blockchain Developer
+# Dev Abdullmajeed (Dan Almag) | Web & Blockchain Developer
 
 **Alias:** DevAbdullMajeed / DanAlmag  
 **Location:** Nigeria  
