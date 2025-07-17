@@ -4,7 +4,7 @@
 **Location:** Nigeria  
 **Email:** [abdulldanalmag@gmail.com](mailto:abdulldanalmag@gmail.com)  
 **Phone:** +2349127406311  
-**GitHub:** [github.com/DanAlmag](https://github.com/DanAlmag)  
+**GitHub:** [github.com/devdanalmag](https://github.com/devdanalmag)  
 **Twitter:** [@devabdullmajeed](https://twitter.com/devabdullmajeed)  
 **Freelancer:** [freelancer.co.ke/u/danalmag](https://www.freelancer.co.ke/u/danalmag)  
 **Blog:** [danalmag.hashnode.dev](https://danalmag.hashnode.dev)
@@ -74,7 +74,7 @@ Let’s collaborate on something amazing!
 
 - **Email:** [abdulldanalmag@gmail.com](mailto:abdulldanalmag@gmail.com)
 - **Phone:** +2349127406311
-- **GitHub:** [DanAlmag](https://github.com/DanAlmag)
+- **GitHub:** [devdanalmag](https://github.com/devdanalmag)
 - **Twitter:** [@devabdullmajeed](https://twitter.com/devabdullmajeed)
 
 ---
