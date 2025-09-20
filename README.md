@@ -26,9 +26,9 @@ I’m **Abdullmajid Alhassan Muazu**, a versatile developer bridging **Web2 and 
 - MySQL, XAMPP, Firebase
 
 ### IoT & Embedded Systems
-- C++, Arduino, ESP32, NodeMCU, Circute Design & Simulation, PCB Design
-- DHT11/22, DS18B20, Soil & Ultrasonic Sensors
-- LCDs, Relays, RFID, Fingerprint modules
+- C++, Circute Design, Circute Simulation, PCB Design
+- Arduino, ESP32, NodeMCU, Modules
+- DHT11/22, DS18B20, Soil, Ultrasonic Sensors, e.t.c
 
 ### Blockchain Development
 - TON, Solidity, Smart Contracts
@@ -37,7 +37,7 @@ I’m **Abdullmajid Alhassan Muazu**, a versatile developer bridging **Web2 and 
 
 ### Tools
 - Git & GitHub
-- Figma, Postman, VS Code
+- Figma, Postman, VS Code, IDE
 - Deno Deploy, Firebase
 
 ---
@@ -46,6 +46,9 @@ I’m **Abdullmajid Alhassan Muazu**, a versatile developer bridging **Web2 and 
 
 ### 🧮 IoT Energy Meter Dashboard
 Real-time dashboard using ESP32, XAMPP & sensors to track energy metrics.
+
+### 🛹 Hybrid Inveter PCB Board
+Complete Circute and PCB of an Hybride Inverter
 
 ### 🌐 Web3 Airtime/Data Platform
 Pay for airtime and data in Nigeria using TON. Wallet integration with PHP + Deno API.
