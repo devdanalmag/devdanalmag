@@ -26,7 +26,7 @@ I’m **Abdullmajid Alhassan Muazu**, a versatile developer bridging **Web2 and 
 - MySQL, XAMPP, Firebase
 
 ### IoT & Embedded Systems
-- Arduino, ESP32, NodeMCU
+- C++, Arduino, ESP32, NodeMCU, Circute Design & Simulation, PCB Design
 - DHT11/22, DS18B20, Soil & Ultrasonic Sensors
 - LCDs, Relays, RFID, Fingerprint modules
 
