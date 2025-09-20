@@ -26,7 +26,7 @@ I’m **Abdullmajid Alhassan Muazu**, a versatile developer bridging **Web2 and 
 - MySQL, XAMPP, Firebase
 
 ### IoT & Embedded Systems
-- C++, Circute Design, Circute Simulation, PCB Design
+- C++, Circut Design, Circut Simulation, PCB Design
 - Arduino, ESP32, NodeMCU, Modules
 - DHT11/22, DS18B20, Soil, Ultrasonic Sensors, e.t.c
 
