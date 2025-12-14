@@ -1438,15 +1438,6 @@ body {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0.85);
-    color: var(--gold);
-    padding: 20px 40px;
-    border: 2px solid var(--gold);
-    border-radius: 8px;
-    font-family: 'Cinzel', serif;
-    font-size: 1.5rem;
-    z-index: 2000;
     pointer-events: none;
     opacity: 0;
     transition: opacity 0.5s ease;
