@@ -2,477 +2,494 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="I'm a passionate full-stack developer specializing in both Web2 and Web3 technologies, with additional expertise in IoT systems. Known professionally as DevAbdullMajeed or DanAlmag, I thrive at the intersection of traditional web development and cutting-edge blockchain solutions.">
-  <meta name="robots" content="index, follow">
-  <meta name="google-site-verification" content="Dt2vr34WJr7yVi5r3KqRomTnOESNGEnUbUknP2xe7ZU" />
-  <title>Dev Dan Almag | Web & Blockchain Developer</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- Tailwind CSS via CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Dev Abdullmajeed Dan Almag | Full Stack Developer & IoT Engineer Portfolio</title>
+    <meta name="description" content="Portfolio of Dev Abdullmajeed Dan Almag, a passionate Full Stack Developer, IoT Engineer, and Web3 Enthusiast specializing in React, Next.js, Node.js, and Embedded Systems.">
+    <meta name="keywords" content="Dev Abdullmajeed Dan Almag, Full Stack Developer, IoT Engineer, Web3 Developer, React, Next.js, Node.js, Portfolio, Web Development, Embedded Systems, Solana, Ethereum">
+    <meta name="author" content="Dev Abdullmajeed Dan Almag">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://devabdullmajeed.vercel.app/"> <!-- Replace with actual URL if known, or keep placeholder -->
+    <meta property="og:title" content="Dev Abdullmajeed Dan Almag | Full Stack Developer & IoT Engineer">
+    <meta property="og:description" content="Explore the portfolio of Dev Abdullmajeed Dan Almag - bridging the gap between physical hardware and decentralized networks.">
+    <meta property="og:image" content="mypfp.png">
 
-  <!-- Animate.css -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://devabdullmajeed.vercel.app/">
+    <meta property="twitter:title" content="Dev Abdullmajeed Dan Almag | Full Stack Developer & IoT Engineer">
+    <meta property="twitter:description" content="Explore the portfolio of Dev Abdullmajeed Dan Almag - bridging the gap between physical hardware and decentralized networks.">
+    <meta property="twitter:image" content="mypfp.png">
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#3e2723">
 
-  <!-- Custom Styles -->
-
+    <!-- Premium Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="img/mypfp.png" type="image/png">
 </head>
 
 <body>
-  <!-- Animated Background -->
-  <div class="bg-animate"></div>
 
-  <!-- Header/Navigation -->
-  <header class="fixed w-full bg-gray-900/80 backdrop-blur-sm z-50 shadow-lg" style="background-color: rgb(8, 10, 15);">
-    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <div class="flex items-center space-x-2">
-        <div
-          class="w-10 h-10 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">
-          <span class="font-bold">DA</span>
+    <!-- Navigation -->
+    <button id="prev-btn" class="nav-btn"><i class="fas fa-chevron-left"></i></button>
+    <button id="next-btn" class="nav-btn"><i class="fas fa-chevron-right"></i></button>
+
+    <div id="end-message" class="end-message">End of Book</div>
+
+    <!-- Audio for Page Turn -->
+    <audio id="page-flip-sound" src="page-flip.mp3" preload="auto"></audio>
+
+    <!-- 3D Book Container -->
+    <div id="book" class="book">
+
+        <!-- SPIRAL SPINE -->
+        <div class="spiral-spine">
+            <div class="ring"></div>
+            <div class="ring"></div>
+            <div class="ring"></div>
+            <div class="ring"></div>
+            <div class="ring"></div>
+            <div class="ring"></div>
+            <div class="ring"></div>
+            <div class="ring"></div>
+            <div class="ring"></div>
+            <div class="ring"></div>
+            <div class="ring"></div>
+            <div class="ring"></div>
         </div>
-        <h1 class="text-xl font-bold">Dev Abdullmajeed (Dan Almag)</h1>
-      </div>
-      <nav class="hidden md:flex space-x-8">
-        <a href="#about" class="nav-link">About</a>
-        <a href="#skills" class="nav-link">Skills</a>
-        <a href="#projects" class="nav-link">Projects</a>
-        <a href="#contact" class="nav-link">Contact</a>
-      </nav>
-      <button id="mobileMenuButton" class="md:hidden text-2xl">
-        <i class="fas fa-bars"></i>
-      </button>
+
+        <!-- PAGE 4 -->
+        <div id="p4" class="paper">
+            <div class="front">
+                <div class="page-inner">
+                    <div class="header-deco">
+                        <h2>Contact</h2>
+                    </div>
+                    <div style="flex-grow:1; display:flex; flex-direction:column; justify-content:center;">
+                        <a href="mailto:abdulldanalmag@gmail.com" class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div><strong>Email</strong><br>abdulldanalmag@gmail.com</div>
+                        </a>
+                        <a href="https://github.com/devdanalmag" target="_blank" class="contact-item">
+                            <i class="fab fa-github"></i>
+                            <div><strong>GitHub</strong><br>github.com/danalmag</div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/devabdullmajeed-danalmag" target="_blank" class="contact-item">
+                            <i class="fab fa-linkedin"></i>
+                            <div><strong>LinkedIn</strong><br>linkedin.com/in/devabdullmajeed</div>
+                        </a>
+                        <a href="https://x.com/devabdullmajeed" target="_blank" class="contact-item">
+                            <i class="fab fa-twitter"></i>
+                            <div><strong>X (Twitter)</strong><br>x.com/devabdullmajeed</div>
+                        </a>
+                        <a href="tel:+2349127406311" class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div><strong>Phone</strong><br>+234 912 740 6311</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="pg-num">- VI -</div>
+            </div>
+            <div class="back leather-style">
+                <div class="cover-frame">
+                    <div class="corner tl"></div>
+                    <div class="corner tr"></div>
+                    <div class="corner bl"></div>
+                    <div class="corner br"></div>
+                    <div class="main-title" style="font-size:4rem;">DA</div>
+                    <div class="gold-divider"></div>
+                    <div class="sub-title">"Code • Create • Innovate"</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PAGE 3 -->
+        <div id="p3" class="paper">
+            <div class="front">
+                <div class="page-inner">
+                    <div class="header-deco">
+                        <h2>Work Experience</h2>
+                    </div>
+                    <div class="experience-timeline">
+                        <!-- Experience Card 1 -->
+                        <div class="experience-card">
+                            <div class="experience-icon-wrapper exp-web3">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <div class="experience-content">
+                                <div class="experience-header">
+                                    <h4>Full Stack & Web3 Developer</h4>
+                                    <span class="experience-badge">Current</span>
+                                </div>
+                                <div class="experience-meta-new">
+                                    <span class="meta-company"><i class="fas fa-briefcase"></i> Freelance</span>
+                                    <span class="meta-date"><i class="fas fa-calendar-alt"></i> 202 - Present</span>
+                                </div>
+                                <p class="experience-desc">Building Decentralized web applications, smart contract
+                                    integrations, and
+                                    interactive dashboards for clients worldwide.</p>
+                                <div class="experience-tags">
+                                    <span class="exp-tag">React</span>
+                                    <span class="exp-tag">Web3</span>
+                                    <span class="exp-tag">Node.js</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="experience-card">
+                            <div class="experience-icon-wrapper exp-web3">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div class="experience-content">
+                                <div class="experience-header">
+                                    <h4>Front-End Developer</h4>
+                                </div>
+                                <div class="experience-meta-new">
+                                    <span class="meta-company"><i class="fas fa-briefcase"></i> Freelance</span>
+                                    <span class="meta-date"><i class="fas fa-calendar-alt"></i> 2022 - 2025</span>
+                                </div>
+                                <p class="experience-desc">Buld Front-End web applications for clients worldwide.</p>
+                                <div class="experience-tags">
+                                    <span class="exp-tag">CSS</span>
+                                    <span class="exp-tag">HTML</span>
+                                    <span class="exp-tag">JavaScript</span>
+                                    <span class="exp-tag">Bootstrap</span>
+                                    <span class="exp-tag">jQuery</span>
+                                    <span class="exp-tag">React</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Experience Card 2 -->
+                        <div class="experience-card">
+                            <div class="experience-icon-wrapper exp-iot">
+                                <i class="fas fa-microchip"></i>
+                            </div>
+                            <div class="experience-content">
+                                <div class="experience-header">
+                                    <h4>IoT & Embedded Systems Engineer</h4>
+                                </div>
+                                <div class="experience-meta-new">
+                                    <span class="meta-company"><i class="fas fa-building"></i>Quantun Engineering
+                                        Solutions</span>
+                                    <span class="meta-date"><i class="fas fa-calendar-alt"></i> 2019 - Present</span>
+                                </div>
+                                <p class="experience-desc">Designed connected devices and monitoring solutions using
+                                    microcontrollers and cloud services.</p>
+                                <div class="experience-tags">
+                                    <span class="exp-tag">ESP32</span>
+                                    <span class="exp-tag">Arduino</span>
+                                    <span class="exp-tag">MQTT</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pg-num">- IV -</div>
+            </div>
+            <div class="back">
+                <div class="page-inner">
+                    <div class="header-deco">
+                        <h2>Services</h2>
+                    </div>
+                    <div class="services-showcase">
+                        <!-- Service Card 1 -->
+                        <div class="service-card">
+                            <div class="service-icon-wrapper service-web">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h4 class="service-title">Full-Stack Development</h4>
+                            <p class="service-desc">End-to-end web application development with modern frameworks</p>
+                        </div>
+
+                        <!-- Service Card 2 -->
+                        <div class="service-card">
+                            <div class="service-icon-wrapper service-blockchain">
+                                <i class="fab fa-ethereum"></i>
+                            </div>
+                            <h4 class="service-title">Web3 & dApps</h4>
+                            <p class="service-desc">Smart contract integration and decentralized applications</p>
+                        </div>
+
+                        <!-- Service Card 3 -->
+                        <div class="service-card">
+                            <div class="service-icon-wrapper service-iot">
+                                <i class="fas fa-network-wired"></i>
+                            </div>
+                            <h4 class="service-title">IoT Solutions</h4>
+                            <p class="service-desc">Connected devices and real-time monitoring systems</p>
+                        </div>
+
+                        <!-- Service Card 4 -->
+                        <div class="service-card">
+                            <div class="service-icon-wrapper service-api">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <h4 class="service-title">API & Backend</h4>
+                            <p class="service-desc">Scalable backend systems and RESTful API development</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="pg-num">- V -</div>
+            </div>
+        </div>
+
+        <!-- PAGE 2 -->
+        <div id="p2" class="paper">
+            <div class="front">
+                <div class="page-inner">
+                    <div class="header-deco">
+                        <h2>Projects</h2>
+                    </div>
+                    <div class="projects-list">
+                        <div class="project-card" data-project-id="hashswap">
+                            <div class="p-icon"><i class="fab fa-ethereum"></i></div>
+                            <div class="p-info">
+                                <h4> HashSwap Front-End Platform
+                                    <i class="fas fa-arrow-right project-arrow"> CLICK TO VIEW</i>
+                                </h4>
+                                <span>React • Tailwind • TypeScript • Web3.js</span>
+                            </div>
+                        </div>
+                        <div class="project-card" data-project-id="onchainng">
+                            <div class="p-icon"><i class="fas fa-chain"></i></div>
+                            <div class="p-info">
+                                <h4> Bill Payment Using Crypto Onchain NG
+                                    <i class="fas fa-arrow-right project-arrow"> CLICK TO VIEW</i>
+                                </h4>
+                                <span>PHP •Mysql • API</span>
+                            </div>
+                        </div>
+                        <div class="project-card" data-project-id="kaminova">
+                            <div class="p-icon"><i class="fas fa-globe"></i></div>
+                            <div class="p-info">
+                                <h4> Kaminova Labs
+                                    <i class="fas fa-arrow-right project-arrow"> CLICK TO VIEW</i>
+                                </h4>
+                                <span>PHP • MySQL • JS</span>
+                            </div>
+                        </div>
+                        <div class="project-card" data-project-id="energymeter">
+                            <div class="p-icon"><i class="fas fa-robot"></i></div>
+                            <div class="p-info">
+                                <h4> Energy Meter
+                                    <i class="fas fa-arrow-right project-arrow"> CLICK TO VIEW</i>
+
+                                </h4>
+                                <span>IOT • ESP32 • C++ • MQTT</span>
+                            </div>
+                        </div>
+                        <div class="project-card" data-project-id="memecoinsite">
+                            <div class="p-icon"><i class="fas fa-image"></i></div>
+                            <div class="p-info">
+                                <h4> WLDG Token Website
+                                    <i class="fas fa-arrow-right project-arrow"> CLICK TO VIEW</i>
+
+                                </h4>
+                                <span>HTML • CSS • JS</span>
+                            </div>
+                        </div>
+                        <div class="project-card" data-project-id="pcbdesign">
+                            <div class="p-icon"><i class="fas fa-bolt"></i></div>
+                            <div class="p-info">
+                                <h4> Inverter PCB Design
+                                    <i class="fas fa-arrow-right project-arrow"> CLICK TO VIEW</i>
+                                </h4>
+                                <span>PCB • Circuit • Design</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pg-num">- II -</div>
+            </div>
+            <div class="back">
+                <div class="page-inner">
+                    <div class="header-deco">
+                        <h2>Skills</h2>
+                    </div>
+                    <div class="skills-showcase">
+                        <!-- Web Development Category -->
+                        <div class="skill-card skill-card-web">
+                            <div class="skill-card-header">
+                                <div class="skill-icon-wrapper">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <h3 class="skill-card-title">Web</h3>
+                            </div>
+                            <div class="skill-chips">
+                                <span class="skill-chip" data-level="expert">HTML</span>
+                                <span class="skill-chip" data-level="expert">CSS</span>
+                                <span class="skill-chip" data-level="expert">JavaScript</span>
+                                <span class="skill-chip" data-level="advanced">TypeScript</span>
+                                <span class="skill-chip" data-level="advanced">PHP</span>
+                                <span class="skill-chip" data-level="expert">React</span>
+                                <span class="skill-chip" data-level="expert">Next.js</span>
+                                <span class="skill-chip" data-level="advanced">Tailwind</span>
+                                <span class="skill-chip" data-level="advanced">Prisma</span>
+                                <span class="skill-chip" data-level="intermediate">PostgreSQL</span>
+                            </div>
+                        </div>
+
+                        <!-- Web3 Category -->
+                        <div class="skill-card skill-card-web3">
+                            <div class="skill-card-header">
+                                <div class="skill-icon-wrapper">
+                                    <i class="fab fa-ethereum"></i>
+                                </div>
+                                <h3 class="skill-card-title">Web3</h3>
+                            </div>
+                            <div class="skill-chips">
+                                <span class="skill-chip" data-level="advanced">TON</span>
+                                <span class="skill-chip" data-level="expert">EVM</span>
+                                <span class="skill-chip" data-level="intermediate">Web3.js</span>
+                                <span class="skill-chip" data-level="intermediate">Ether.js</span>
+                                <span class="skill-chip" data-level="intermediate">Solidity</span>
+                                <span class="skill-chip" data-level="intermediate">Hedera</span>
+
+                            </div>
+                        </div>
+
+                        <!-- IoT Category -->
+                        <div class="skill-card skill-card-iot">
+                            <div class="skill-card-header">
+                                <div class="skill-icon-wrapper">
+                                    <i class="fas fa-microchip"></i>
+                                </div>
+                                <h3 class="skill-card-title">IoT & Embedded</h3>
+                            </div>
+                            <div class="skill-chips">
+                                <span class="skill-chip" data-level="expert">ESP32</span>
+                                <span class="skill-chip" data-level="expert">PCB Design</span>
+                                <span class="skill-chip" data-level="expert">Circuit Design</span>
+                                <span class="skill-chip" data-level="expert">Arduino</span>
+                                <span class="skill-chip" data-level="advanced">Sensors</span>
+                                <span class="skill-chip" data-level="intermediate">Blynk</span>
+                                <span class="skill-chip" data-level="advanced">Automation</span>
+                                <span class="skill-chip" data-level="intermediate">Robotics</span>
+                            </div>
+                        </div>
+
+                        <!-- Tools Category -->
+                        <div class="skill-card skill-card-tools">
+                            <div class="skill-card-header">
+                                <div class="skill-icon-wrapper">
+                                    <i class="fas fa-tools"></i>
+                                </div>
+                                <h3 class="skill-card-title">Tools</h3>
+                            </div>
+                            <div class="skill-chips">
+                                <span class="skill-chip" data-level="expert">Git</span>
+                                <span class="skill-chip" data-level="advanced">Docker</span>
+                                <span class="skill-chip" data-level="advanced">CI/CD</span>
+                                <span class="skill-chip" data-level="advanced">Arduino IDE</span>
+                                <span class="skill-chip" data-level="advanced">Blynk IOT</span>
+                                <span class="skill-chip" data-level="intermediate">XAMPP</span>
+                                <span class="skill-chip" data-level="intermediate">Deno</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pg-num">- III -</div>
+            </div>
+        </div>
+
+        <!-- PAGE 1 (Cover & Intro) -->
+        <div id="p1" class="paper">
+            <div class="front leather-style">
+                <div class="cover-frame">
+                    <div class="corner tl"></div>
+                    <div class="corner tr"></div>
+                    <div class="corner bl"></div>
+                    <div class="corner br"></div>
+
+                    <div class="cover-badge">PORTFOLIO</div>
+                    <h1 class="main-title"> DEV. <br>ABDULLMAJEED</h1>
+                    <h2 class="nick-name"> Dan Almag</h2>
+                    <div class="gold-divider"></div>
+                    <div class="sub-title">Full Stack & Web3 Developer</div>
+
+                    <div style="margin-top:40px; font-size:0.9rem; color:var(--gold); opacity:0.7;">2025 EDITION</div>
+                </div>
+            </div>
+            <div class="back">
+                <div class="page-inner">
+                    <div class="header-deco">
+                        <h2>The Author</h2>
+                    </div>
+                    <div class="profile-card">
+                        <div class="avatar"><img src="img/photo.png" alt="Abdullmajid Magaji"></div>
+                        <h3>Abdullmajid Muazu</h3>
+                        <p style="color:#8e44ad; margin-bottom:10px;">Software, Web3 & IoT Engineer</p>
+                        <p class="author-summary">
+                            Web Developer, IoT Engineer, and Blockchain Builder with 4+ years of experience developing
+                            web
+                            applications, Web3 systems (TON, Solana, EVM, Hedera), and IoT/robotics devices. Skilled in
+                            <b> <i>TypeScript, Node.js, Next.js, PHP, React, Prisma, C++, PCB Design, and embedded
+                                    systems.</i></b>
+                            Builds
+                            scalable
+                            full-stack
+                            systems and automation solutions.
+                        </p>
+                        <p class="bio-text">
+                            "I craft digital experiences that bridge the gap between physical hardware and decentralized
+                            networks.
+                            Passionate about building scalable, secure, and innovative solutions."
+                        </p>
+                    </div>
+                </div>
+                <div class="pg-num">- I -</div>
+            </div>
+        </div>
+
     </div>
-  </header>
 
-  <!-- Mobile Menu -->
-  <div id="mobileMenu" class="mobile-menu">
-    <button id="mobileMenuClose" class="mobile-menu-close">
-      <i class="fas fa-times"></i>
-    </button>
-    <a href="#about" class="nav-link">About</a>
-    <a href="#skills" class="nav-link">Skills</a>
-    <a href="#projects" class="nav-link">Projects</a>
-    <a href="#contact" class="nav-link">Contact</a>
-  </div>
-
-  <!-- Hero Section -->
-  <section class="min-h-screen flex items-center pt-20 pb-10 px-6">
-    <div class="container mx-auto text-center md:text-left">
-      <div class="max-w-3xl mx-auto md:mx-0">
-        <h1 class="text-4xl md:text-6xl font-bold mb-4 animate__animated animate__fadeInDown">
-          Hi, I'm <span class="text-blue-400">Abdullmajid</span>
-        </h1>
-        <h2
-          class="text-2xl md:text-3xl font-semibold mb-6 text-gray-300 animate__animated animate__fadeInDown animate__delay-1s">
-          Web2/Web3 Developer & IoT Innovator
-        </h2>
-        <p class="text-lg md:text-xl mb-8 text-gray-300 animate__animated animate__fadeIn animate__delay-2s">
-          I build bridges between the physical and digital worlds through code, creating solutions that matter.
-        </p>
-        <div
-          class="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4 animate__animated animate__fadeInUp animate__delay-3s">
-          <a href="#projects"
-            class="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium transition-all transform hover:scale-105">
-            View My Work
-          </a>
-          <a href="#contact"
-            class="px-8 py-3 bg-transparent border-2 border-blue-400 hover:bg-blue-900/30 rounded-lg font-medium transition-all transform hover:scale-105">
-            Contact Me
-          </a>
+    <div id="project-detail" class="project-detail">
+        <div class="project-detail-inner">
+            <button id="project-detail-close" class="detail-close">&times;</button>
+            <div class="project-detail-layout">
+                <div class="project-detail-image" id="project-image-container" title="Click to view full image">
+                    <img id="project-detail-img" src="" alt="">
+                    <div class="image-zoom-hint"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="project-detail-content">
+                    <h3 id="project-detail-title"></h3>
+                    <p id="project-detail-description"></p>
+                    <div class="project-detail-meta">
+                        <span id="project-detail-stack"></span>
+                        <span id="project-detail-likes"></span>
+                    </div>
+                    <div class="project-actions">
+                        <a id="project-demo-link" href="#" target="_blank" class="project-btn demo-btn">
+                            <i class="fas fa-external-link-alt"></i> View Demo
+                        </a>
+                        <button id="project-fullimage-btn" class="project-btn fullimage-btn">
+                            <i class="fas fa-expand"></i> Full Image
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </section>
 
-  <!-- About Section -->
-  <section id="about" class="py-20 px-6">
-    <div class="container mx-auto max-w-6xl">
-      <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">
-        <span class="border-b-4 border-blue-500 pb-2">About Me</span>
-      </h2>
-      <div class="flex flex-col md:flex-row items-center gap-12">
-        <div class="md:w-1/3 flex justify-center">
-          <div class="relative">
-            <div class="w-64 h-64 rounded-full overflow-hidden border-4 border-blue-400 shadow-xl">
-              <img src="mypfp.png" alt="Dev Dan Almag" class="w-full h-full object-cover">
-            </div>
-            <div class="absolute -bottom-3 -right-3 bg-gray-800 rounded-lg px-4 py-2 shadow-lg border border-gray-700">
-              <p class="font-semibold text-blue-400">Abdullmajid Alhassan Muazu</p>
-            </div>
-          </div>
-        </div>
-        <div class="md:w-2/3">
-          <p class="text-lg mb-6 leading-relaxed">
-            I'm a passionate full-stack developer specializing in both Web2 and Web3 technologies, with additional
-            expertise in IoT systems.
-            Known professionally as <span class="text-blue-400 font-medium">DevAbdullMajeed</span> or <span
-              class="text-blue-400 font-medium">DanAlmag</span>,
-            I thrive at the intersection of traditional web development and cutting-edge blockchain solutions.
-          </p>
-          <p class="text-lg mb-6 leading-relaxed">
-            My journey began with web development, expanded into IoT hardware programming, and now includes blockchain
-            and smart contract development.
-            This unique combination allows me to create comprehensive solutions that bridge digital and physical worlds.
-          </p>
-          <p class="text-lg leading-relaxed">
-            When I'm not coding, you can find me contributing to open-source projects, exploring new technologies,
-            or mentoring upcoming developers in my community.
-          </p>
-        </div>
-      </div>
+    <!-- Fullscreen Image Viewer -->
+    <div id="fullscreen-viewer" class="fullscreen-viewer">
+        <button id="fullscreen-close" class="fullscreen-close">&times;</button>
+        <img id="fullscreen-img" src="" alt="">
+        <div class="fullscreen-caption" id="fullscreen-caption"></div>
     </div>
-  </section>
 
-  <!-- Skills Section -->
-  <section id="skills" class="py-20 px-6 bg-gray-900/50">
-    <div class="container mx-auto max-w-6xl">
-      <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">
-        <span class="border-b-4 border-blue-500 pb-2">My Skills</span>
-      </h2>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <!-- Web Development -->
-        <div class="card p-6 rounded-xl">
-          <div class="flex items-center mb-4">
-            <div class="w-12 h-12 rounded-lg bg-blue-900/30 flex items-center justify-center text-blue-400 mr-4">
-              <i class="fas fa-code text-2xl"></i>
-            </div>
-            <h3 class="text-xl font-bold">Web Development</h3>
-          </div>
-          <ul class="space-y-2">
-            <li class="flex items-center">
-              <i class="fas fa-check-circle text-blue-400 mr-2"></i>
-              HTML, CSS, JavaScript (ES6+)
-            </li>
-            <li class="flex items-center">
-              <i class="fas fa-check-circle text-blue-400 mr-2"></i>
-              PHP & Laravel Framework
-            </li>
-            <li class="flex items-center">
-              <i class="fas fa-check-circle text-blue-400 mr-2"></i>
-              React.js & Next.js
-            </li>
-            <li class="flex items-center">
-              <i class="fas fa-check-circle text-blue-400 mr-2"></i>
-              TailwindCSS & Bootstrap
-            </li>
-          </ul>
-        </div>
-
-        <!-- Blockchain -->
-        <div class="card p-6 rounded-xl">
-          <div class="flex items-center mb-4">
-            <div class="w-12 h-12 rounded-lg bg-purple-900/30 flex items-center justify-center text-purple-400 mr-4">
-              <i class="fas fa-link text-2xl"></i>
-            </div>
-            <h3 class="text-xl font-bold">Blockchain</h3>
-          </div>
-          <ul class="space-y-2">
-            <li class="flex items-center">
-              <i class="fas fa-check-circle text-purple-400 mr-2"></i>
-              Solidity Smart Contracts
-            </li>
-            <li class="flex items-center">
-              <i class="fas fa-check-circle text-purple-400 mr-2"></i>
-              TON Blockchain Development
-            </li>
-            <li class="flex items-center">
-              <i class="fas fa-check-circle text-purple-400 mr-2"></i>
-              Web3.js & Ethers.js
-            </li>
-            <li class="flex items-center">
-              <i class="fas fa-check-circle text-purple-400 mr-2"></i>
-              NFT Marketplace Development
-            </li>
-          </ul>
-        </div>
-
-        <!-- IoT -->
-        <div class="card p-6 rounded-xl">
-          <div class="flex items-center mb-4">
-            <div class="w-12 h-12 rounded-lg bg-green-900/30 flex items-center justify-center text-green-400 mr-4">
-              <i class="fas fa-microchip text-2xl"></i>
-            </div>
-            <h3 class="text-xl font-bold">IoT & Hardware</h3>
-          </div>
-          <ul class="space-y-2">
-            <li class="flex items-center">
-              <i class="fas fa-check-circle text-green-400 mr-2"></i>
-              Arduino Programming
-            </li>
-            <li class="flex items-center">
-              <i class="fas fa-check-circle text-green-400 mr-2"></i>
-              ESP32 & Sensor Integration
-            </li>
-            <li class="flex items-center">
-              <i class="fas fa-check-circle text-green-400 mr-2"></i>
-              Robotics & Automation
-            </li>
-            <li class="flex items-center">
-              <i class="fas fa-check-circle text-green-400 mr-2"></i>
-              Data Visualization Dashboards
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="py-20 px-6">
-    <div class="container mx-auto max-w-6xl">
-      <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">
-        <span class="border-b-4 border-blue-500 pb-2">Featured Projects</span>
-      </h2>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <!-- Project 1 -->
-        <div class="card rounded-xl overflow-hidden">
-          <div class="h-48 bg-gradient-to-r from-blue-900 to-purple-900 flex items-center justify-center">
-            <i class="fas fa-bolt text-6xl text-yellow-400 opacity-50"></i>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">IoT Energy Meter Dashboard</h3>
-            <p class="text-gray-300 mb-4">
-              Real-time energy monitoring system with ESP32, various sensors, and a PHP dashboard that visualizes
-              consumption patterns and provides analytics.
-            </p>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-3 py-1 bg-blue-900/50 text-blue-300 rounded-full text-sm">ESP32</span>
-              <span class="px-3 py-1 bg-blue-900/50 text-blue-300 rounded-full text-sm">PHP</span>
-              <span class="px-3 py-1 bg-blue-900/50 text-blue-300 rounded-full text-sm">JavaScript</span>
-              <span class="px-3 py-1 bg-blue-900/50 text-blue-300 rounded-full text-sm">IoT</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="card rounded-xl overflow-hidden">
-          <div class="h-48 bg-gradient-to-r from-purple-900 to-indigo-900 flex items-center justify-center">
-            <i class="fab fa-ethereum text-6xl text-purple-400 opacity-50"></i>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">Web3 Airtime & Data Purchase</h3>
-            <p class="text-gray-300 mb-4">
-              A decentralized application that allows users to purchase mobile airtime and data in Nigeria using TON
-              tokens, with wallet integration and instant delivery.
-            </p>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-3 py-1 bg-purple-900/50 text-purple-300 rounded-full text-sm">TON</span>
-              <span class="px-3 py-1 bg-purple-900/50 text-purple-300 rounded-full text-sm">Solidity</span>
-              <span class="px-3 py-1 bg-purple-900/50 text-purple-300 rounded-full text-sm">Web3</span>
-              <span class="px-3 py-1 bg-purple-900/50 text-purple-300 rounded-full text-sm">React</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="card rounded-xl overflow-hidden">
-          <div class="h-48 bg-gradient-to-r from-green-900 to-teal-900 flex items-center justify-center">
-            <i class="fas fa-robot text-6xl text-green-400 opacity-50"></i>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">Greenhouse Monitoring Robot</h3>
-            <p class="text-gray-300 mb-4">
-              Autonomous robot that monitors soil conditions, humidity, and temperature in greenhouses, with obstacle
-              avoidance and remote reporting capabilities.
-            </p>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-3 py-1 bg-green-900/50 text-green-300 rounded-full text-sm">Arduino</span>
-              <span class="px-3 py-1 bg-green-900/50 text-green-300 rounded-full text-sm">Sensors</span>
-              <span class="px-3 py-1 bg-green-900/50 text-green-300 rounded-full text-sm">Robotics</span>
-              <span class="px-3 py-1 bg-green-900/50 text-green-300 rounded-full text-sm">Automation</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 4 -->
-        <div class="card rounded-xl overflow-hidden">
-          <div class="h-48 bg-gradient-to-r from-indigo-900 to-pink-900 flex items-center justify-center">
-            <i class="fas fa-coins text-6xl text-yellow-400 opacity-50"></i>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">NFT Marketplace UI</h3>
-            <p class="text-gray-300 mb-4">
-              Cyberpunk-themed NFT marketplace interface for SEI Blockchain, featuring wallet integration, collection
-              browsing, and a sleek dark-mode design.
-            </p>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-3 py-1 bg-indigo-900/50 text-indigo-300 rounded-full text-sm">SEI Blockchain</span>
-              <span class="px-3 py-1 bg-indigo-900/50 text-indigo-300 rounded-full text-sm">React</span>
-              <span class="px-3 py-1 bg-indigo-900/50 text-indigo-300 rounded-full text-sm">TailwindCSS</span>
-              <span class="px-3 py-1 bg-indigo-900/50 text-indigo-300 rounded-full text-sm">NFT</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="py-20 px-6 bg-gray-900/50">
-    <div class="container mx-auto max-w-4xl">
-      <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">
-        <span class="border-b-4 border-blue-500 pb-2">Get In Touch</span>
-      </h2>
-
-      <div class="flex flex-col md:flex-row gap-12">
-        <div class="md:w-1/2">
-          <h3 class="text-xl font-semibold mb-4">Contact Information</h3>
-          <div class="space-y-4">
-            <div class="flex items-start">
-              <div class="w-10 h-10 rounded-full bg-blue-900/30 flex items-center justify-center text-blue-400 mr-4">
-                <i class="fas fa-envelope"></i>
-              </div>
-              <div>
-                <p class="text-gray-400">Email</p>
-                <a href="mailto:abdulldanalmag@gmail.com"
-                  class="text-blue-400 hover:underline">abdulldanalmag@gmail.com</a>
-              </div>
-            </div>
-
-            <div class="flex items-start">
-              <div class="w-10 h-10 rounded-full bg-blue-900/30 flex items-center justify-center text-blue-400 mr-4">
-                <i class="fas fa-phone"></i>
-              </div>
-              <div>
-                <p class="text-gray-400">Phone</p>
-                <a href="tel:+2349127406311" class="text-blue-400 hover:underline">+234 912 740 6311</a>
-              </div>
-            </div>
-
-            <div class="flex items-start">
-              <div class="w-10 h-10 rounded-full bg-blue-900/30 flex items-center justify-center text-blue-400 mr-4">
-                <i class="fab fa-github"></i>
-              </div>
-              <div>
-                <p class="text-gray-400">GitHub</p>
-                <a href="https://github.com/DevDanAlmag" target="_blank"
-                  class="text-blue-400 hover:underline">github.com/DevDanAlmag</a>
-              </div>
-            </div>
-
-            <div class="flex items-start">
-              <div class="w-10 h-10 rounded-full bg-blue-900/30 flex items-center justify-center text-blue-400 mr-4">
-                <i class="fab fa-twitter"></i>
-              </div>
-              <div>
-                <p class="text-gray-400">Twitter</p>
-                <a href="https://twitter.com/devabdullmajeed" target="_blank"
-                  class="text-blue-400 hover:underline">@devabdullmajeed</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="md:w-1/2">
-          <h3 class="text-xl font-semibold mb-4">Send Me a Message</h3>
-          <form class="space-y-4">
-            <div>
-              <label for="name" class="block text-gray-400 mb-1">Name</label>
-              <input type="text" id="name"
-                class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
-            </div>
-
-            <div>
-              <label for="email" class="block text-gray-400 mb-1">Email</label>
-              <input type="email" id="email"
-                class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
-            </div>
-
-            <div>
-              <label for="message" class="block text-gray-400 mb-1">Message</label>
-              <textarea id="message" rows="4"
-                class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-            </div>
-
-            <button type="submit"
-              class="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium transition-all w-full">
-              Send Message
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-gray-900 py-8 px-6 border-t border-gray-800">
-    <div class="container mx-auto">
-      <div class="flex flex-col md:flex-row justify-between items-center">
-        <div class="mb-4 md:mb-0">
-          <div class="flex items-center space-x-2">
-            <div
-              class="w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">
-              <span class="font-bold text-sm">DA</span>
-            </div>
-            <span class="font-bold">Dev Dan Almag</span>
-          </div>
-        </div>
-
-        <div class="flex space-x-6">
-          <a href="https://github.com/DanAlmag" target="_blank" class="text-gray-400 hover:text-blue-400 text-xl">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="https://twitter.com/devabdullmajeed" target="_blank"
-            class="text-gray-400 hover:text-blue-400 text-xl">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="mailto:abdulldanalmag@gmail.com" class="text-gray-400 hover:text-blue-400 text-xl">
-            <i class="fas fa-envelope"></i>
-          </a>
-        </div>
-      </div>
-
-      <div class="mt-8 text-center text-gray-500 text-sm">
-        &copy; 2025 Dev Dan Almag. All rights reserved.
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // Mobile menu functionality
-      const mobileMenuButton = document.getElementById('mobileMenuButton');
-      const mobileMenu = document.getElementById('mobileMenu');
-      const mobileMenuClose = document.getElementById('mobileMenuClose');
-
-      // Toggle mobile menu
-      mobileMenuButton.addEventListener('click', function () {
-        mobileMenu.classList.add('active');
-      });
-
-      // Close mobile menu
-      mobileMenuClose.addEventListener('click', function () {
-        mobileMenu.classList.remove('active');
-      });
-
-      // Close menu when clicking on links
-      document.querySelectorAll('#mobileMenu a').forEach(link => {
-        link.addEventListener('click', function () {
-          mobileMenu.classList.remove('active');
-        });
-      });
-
-      // Smooth scrolling for all links
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-          const target = document.querySelector(this.getAttribute('href'));
-          if (target) {
-            window.scrollTo({
-              top: target.offsetTop - 80,
-              behavior: 'smooth'
-            });
-          }
-        });
-      });
-    });
-  </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
