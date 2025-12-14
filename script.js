@@ -42,7 +42,7 @@ const projectInfo = {
         title: "Kaminova Labs",
         description: "Full-stack web platform for Kaminova Labs—publish projects, announce events, and showcase every initiative under the Kaminova umbrella. Features an admin dashboard, real-time updates, and a clean, responsive UI that scales from desktop to mobile.",
         stack: "PHP • MySQL • HTML • JS",
-        image: "img/projects/Kaminova.png",
+        image: "img/projects/kaminova.png",
         likes: "76 likes",
         demoLink: "https://kaminovaglobal.com"
     },
