@@ -3,7 +3,7 @@ export default function handler(req, res) {
     // Only expose variables intended for the client
     const config = {
         GOOGLE_SCRIPT_URL: process.env.GOOGLE_SCRIPT_URL,
-        IP_API_URL: process.env.IP_API_URL || 'https://freeipapi.com/api/json',
+        IP_API_URL: process.env.IP_API_URL || 'https://ipapi.co/json/',
         VERSION: process.env.VERSION || '2.3.0'
     };
 

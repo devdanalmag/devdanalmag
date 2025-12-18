@@ -20,7 +20,7 @@ async function loadEnv() {
         // Map the data to window.ENV
         window.ENV = {
             GOOGLE_SCRIPT_URL: data.GOOGLE_SCRIPT_URL || '',
-            IP_API_URL: data.IP_API_URL || 'https://freeipapi.com/api/json',
+            IP_API_URL: data.IP_API_URL || 'https://ipapi.co/json/',
             VERSION: data.VERSION || '2.3.0'
         };
 
