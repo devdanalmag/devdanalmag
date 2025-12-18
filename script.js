@@ -110,21 +110,6 @@ function updateButtons() {
         if (currentLocation >= maxLocation) isEnd = true;
     }
 
-    if (isEnd) {
-        nextBtn.disabled = true;
-        endMessage.classList.add("show");
-        book.setAttribute("style", "border-left: none; border-right: none; border-top: 0px solid aliceblue;");
-
-    } else {
-        nextBtn.disabled = false;
-        endMessage.classList.remove("show");
-        setTimeout(() => {
-            book.setAttribute("style", "border-left: 2px solid #888; border-right: 5px solid #b0afaf; border-top: 2px solid aliceblue;");
-        }, 1000);
-
-
-    }
-
     // Determine if we are at the start
     let isStart = false;
     if (currentLocation === 1) {
@@ -137,8 +122,37 @@ function updateButtons() {
 
     if (isStart) {
         prevBtn.disabled = true;
+        book.classList.remove("open");
+        book.classList.remove("close-end");
     } else {
         prevBtn.disabled = false;
+    }
+
+    if (isEnd) {
+        nextBtn.disabled = true;
+        endMessage.classList.add("show");
+        book.classList.remove("open");
+        book.classList.add("close-end");
+    } else {
+        nextBtn.disabled = false;
+        endMessage.classList.remove("show");
+        if (!isStart) {
+            book.classList.add("open");
+            book.classList.remove("close-end");
+        }
+    }
+
+    // --- BORDER MANAGEMENT ---
+    // Remove borders at the very beginning and very end
+    if (isStart || isEnd) {
+        book.style.borderLeft = "none";
+        book.style.borderRight = "none";
+        book.style.borderTop = "none";
+    } else {
+        // Show 3D borders when open
+        book.style.borderLeft = "2px solid #888";
+        book.style.borderRight = "5px solid #b0afaf";
+        book.style.borderTop = "2px solid aliceblue";
     }
 }
 
@@ -165,11 +179,8 @@ function openBook() {
 }
 
 function closeBook(isAtBeginning) {
-    if (isAtBeginning) {
-        book.classList.remove("open");
-    } else {
-        book.classList.remove("open");
-    }
+    book.classList.remove("open");
+    // State handled by updateButtons
 }
 
 function goNextPage() {

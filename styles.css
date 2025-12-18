@@ -64,6 +64,10 @@ body {
     transform: translateX(50%);
 }
 
+.book.close-end {
+    transform: translateX(100%);
+}
+
 /* --- SPIRAL SPINE --- */
 .spiral-spine {
     position: absolute;
@@ -1367,7 +1371,8 @@ body {
 }
 
 .contact-item::after {
-    content: '\f105'; /* Font Awesome angle-right */
+    content: '\f105';
+    /* Font Awesome angle-right */
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
     margin-left: auto;
@@ -1456,6 +1461,10 @@ body {
 
     .book.open {
         transform: translateX(50%) scale(0.8);
+    }
+
+    .book.close-end {
+        transform: translateX(100%) scale(0.8);
     }
 }
 
