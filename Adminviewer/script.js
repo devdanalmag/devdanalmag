@@ -1,13 +1,15 @@
 // ==================== VISITOR TRACKER ADMIN ====================
 
-// PASTE YOUR GOOGLE APPS SCRIPT WEB APP URL HERE
-const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxPnYep23T-G4kedQrLkKhXToIIdoCMQzk6dP09ETHplPjdeDlZrLWD9zoMqiape7re/exec';
-
 const STORAGE_KEY = 'portfolio_visitors';
 
 // ==================== DATA MANAGEMENT ====================
 
 async function getVisitors() {
+    // Wait for environment if it's still loading
+    if (window.envPromise) await window.envPromise;
+
+    const GOOGLE_SCRIPT_URL = window.ENV ? window.ENV.GOOGLE_SCRIPT_URL : '';
+
     // Try to fetch from Google Sheets if URL is provided
     if (GOOGLE_SCRIPT_URL && GOOGLE_SCRIPT_URL !== 'YOUR_GOOGLE_SCRIPT_WEB_APP_URL_HERE') {
         try {

@@ -1,9 +1,9 @@
-(function () {
-    // ==================== CONFIGURATION ====================
-    // PASTE YOUR GOOGLE APPS SCRIPT WEB APP URL HERE
-    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxPnYep23T-G4kedQrLkKhXToIIdoCMQzk6dP09ETHplPjdeDlZrLWD9zoMqiape7re/exec';
+(async function () {
+    // Wait for the environment loader to finish
+    await window.envPromise;
 
-    // =======================================================
+    const GOOGLE_SCRIPT_URL = window.ENV ? window.ENV.GOOGLE_SCRIPT_URL : '';
+    const IP_API_URL = window.ENV ? window.ENV.IP_API_URL : 'https://ip-api.com/json/?fields=status,query,country,countryCode,regionName,city';
 
     const SESSION_KEY = 'portfolio_session_active';
 
@@ -17,7 +17,7 @@
     async function getVisitorInfo() {
         const device = getDeviceType();
         try {
-            const response = await fetch('http://ip-api.com/json/?fields=status,query,country,countryCode,regionName,city');
+            const response = await fetch(IP_API_URL);
             const data = await response.json();
 
             if (data.status === 'success') {
