@@ -37,7 +37,7 @@
             console.log(mycode === null ? "User cancelled the prompt." : "No code entered.");
             deleteCookie('PAGEACCESS');
             alert("Access denied. Redirecting to homepage.");
-            window.location.href = "./";
+            window.location.href = "https://devabdullmajeed.vercel.app";
         }
         else {
             const trimmedCode = mycode.trim().toUpperCase();
@@ -46,7 +46,7 @@
                 console.log("Invalid code entered: " + trimmedCode);
                 deleteCookie('PAGEACCESS');
                 alert("Invalid code. Redirecting to homepage.");
-                window.location.href = "./";
+                window.location.href = "https://devabdullmajeed.vercel.app";
             }
             else {
                 console.log("Code verified successfully.");
