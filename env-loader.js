@@ -1,6 +1,6 @@
 /**
  * Direct .env Loader for Client-Side JS
- * Fetches and parses the .env file from the root directory.
+ * Fetches and parses the .env file from the rot directory.
  */
 
 window.ENV = {};
