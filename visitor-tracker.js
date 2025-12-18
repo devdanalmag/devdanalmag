@@ -3,7 +3,7 @@
     await window.envPromise;
 
     const GOOGLE_SCRIPT_URL = window.ENV ? window.ENV.GOOGLE_SCRIPT_URL : '';
-    const IP_API_URL = window.ENV ? window.ENV.IP_API_URL : 'https://ip-api.com/json/?fields=status,query,country,countryCode,regionName,city';
+    const IP_API_URL = window.ENV ? window.ENV.IP_API_URL : 'https://freeipapi.com/api/json';
 
     const SESSION_KEY = 'portfolio_session_active';
 
@@ -20,13 +20,13 @@
             const response = await fetch(IP_API_URL);
             const data = await response.json();
 
-            if (data.status === 'success') {
+            if (data.status === 'success' || data.ipAddress) {
                 return {
-                    ip: data.query,
-                    country: data.country,
+                    ip: data.query || data.ipAddress,
+                    country: data.country || data.countryName,
                     countryCode: data.countryCode,
                     region: data.regionName,
-                    city: data.city,
+                    city: data.city || data.cityName,
                     device: device,
                     timestamp: Date.now()
                 };
