@@ -322,14 +322,15 @@ body {
 
 /* --- PAGE CONTENT STYLING --- */
 .page-inner {
-    padding: 10px 30px 40px 50px;
+    padding: 10px 25px 40px 50px;
     height: 100%;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .back .page-inner {
-    padding: 10px 50px 40px 30px;
+    padding: 10px 50px 40px 25px;
 }
 
 /* Flip padding for back pages */
@@ -345,14 +346,15 @@ body {
 
 .header-deco h2 {
     font-family: 'Playfair Display', 'Cinzel', serif;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     font-weight: 900;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     text-transform: uppercase;
     background: linear-gradient(180deg, #3e2723, #8B4513, #c5a059);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    word-break: break-word;
 }
 
 .header-deco::after {
@@ -462,10 +464,10 @@ body {
 
 .main-title {
     font-family: 'Playfair Display', 'Cinzel', serif;
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: 900;
     line-height: 0.95;
-    letter-spacing: 5px;
+    letter-spacing: 4px;
     text-transform: uppercase;
     /* Luxe gold gradient text */
     background: linear-gradient(180deg, #ffd700 0%, #c5a059 40%, #a67c00 70%, #c5a059 100%);
@@ -475,16 +477,16 @@ body {
     /* 3D Emboss / Engraved Effect (visible through the gradient) */
     filter: drop-shadow(0 1px 0 #b8860b) drop-shadow(0 2px 1px rgba(0,0,0,0.5)) drop-shadow(0 0 15px rgba(197, 160, 89, 0.25));
     text-align: center;
-    margin: 15px 0;
+    margin: 10px 0;
 }
 
 .nick-name {
     font-family: 'Cormorant Garamond', 'Playfair Display', serif;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 700;
     font-style: italic;
     line-height: 1;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     /* Warm gold gradient */
     background: linear-gradient(180deg, #ffe08a 0%, #c5a059 60%, #8b6914 100%);
     -webkit-background-clip: text;
@@ -496,9 +498,9 @@ body {
 
 .cover-badge {
     font-family: 'Bodoni Moda', 'Cinzel', serif;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-weight: 900;
-    letter-spacing: 8px;
+    letter-spacing: 6px;
     text-transform: uppercase;
     color: transparent;
     background: linear-gradient(90deg, rgba(255,215,0,0.6), #ffe08a, rgba(255,215,0,0.6));
@@ -507,8 +509,8 @@ body {
     text-decoration: none;
     border-bottom: 1px solid rgba(197, 160, 89, 0.4);
     border-top: 1px solid rgba(197, 160, 89, 0.4);
-    padding: 8px 0;
-    margin-bottom: 30px;
+    padding: 6px 0;
+    margin-bottom: 15px;
     filter: drop-shadow(0 0 8px rgba(197, 160, 89, 0.2));
 }
 
@@ -530,7 +532,7 @@ body {
     width: 50px;
     height: 3px;
     background: linear-gradient(90deg, transparent, var(--gold), transparent);
-    margin: 20px 0;
+    margin: 10px 0;
     animation: breathe 4s ease-in-out infinite;
     box-shadow: 0 0 8px rgba(197, 160, 89, 0.4);
 }
