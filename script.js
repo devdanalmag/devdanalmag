@@ -512,3 +512,138 @@ document.addEventListener("keydown", (e) => {
         }
     }
 });
+
+// ==================== 3D MOUSE-TRACKING PARALLAX TILT ====================
+(function() {
+    const bookEl = document.querySelector('#book');
+    if (!bookEl) return;
+
+    let tiltX = 0, tiltY = 0;
+    let targetTiltX = 0, targetTiltY = 0;
+    const MAX_TILT = 8; // degrees
+
+    function animateTilt() {
+        // Smooth interpolation
+        tiltX += (targetTiltX - tiltX) * 0.08;
+        tiltY += (targetTiltY - tiltY) * 0.08;
+
+        // Set CSS custom properties — these compose WITH class-based transforms
+        bookEl.style.setProperty('--tilt-x', tiltX.toFixed(2) + 'deg');
+        bookEl.style.setProperty('--tilt-y', tiltY.toFixed(2) + 'deg');
+
+        requestAnimationFrame(animateTilt);
+    }
+
+    document.addEventListener('mousemove', (e) => {
+        if (window.innerWidth <= 600) return; // Skip on mobile
+
+        const rect = bookEl.getBoundingClientRect();
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2;
+
+        // Normalized -1 to 1
+        const normX = (e.clientX - centerX) / (window.innerWidth / 2);
+        const normY = (e.clientY - centerY) / (window.innerHeight / 2);
+
+        targetTiltY = normX * MAX_TILT;
+        targetTiltX = -normY * MAX_TILT;
+    });
+
+    document.addEventListener('mouseleave', () => {
+        targetTiltX = 0;
+        targetTiltY = 0;
+    });
+
+    // Start the animation loop
+    requestAnimationFrame(animateTilt);
+})();
+
+// ==================== FLOATING GOLD PARTICLE SYSTEM ====================
+(function() {
+    const canvas = document.querySelector('#particles-canvas');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+
+    let particles = [];
+    const PARTICLE_COUNT = 60;
+
+    function resize() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    }
+    resize();
+    window.addEventListener('resize', resize);
+
+    class Particle {
+        constructor() {
+            this.reset();
+        }
+        reset() {
+            this.x = Math.random() * canvas.width;
+            this.y = Math.random() * canvas.height;
+            this.size = Math.random() * 2.5 + 0.5;
+            this.speedX = (Math.random() - 0.5) * 0.4;
+            this.speedY = (Math.random() - 0.5) * 0.3 - 0.15; // slight upward drift
+            this.opacity = Math.random() * 0.6 + 0.1;
+            this.targetOpacity = this.opacity;
+            this.fadeSpeed = Math.random() * 0.005 + 0.002;
+            this.glowSize = this.size * (3 + Math.random() * 3);
+            // Gold color variations
+            const hue = 38 + Math.random() * 15; // 38-53 range (gold)
+            const sat = 60 + Math.random() * 30;
+            const light = 50 + Math.random() * 20;
+            this.color = `hsla(${hue}, ${sat}%, ${light}%,`;
+        }
+        update() {
+            this.x += this.speedX;
+            this.y += this.speedY;
+
+            // Fade in/out organically
+            if (Math.random() < 0.01) {
+                this.targetOpacity = Math.random() * 0.6 + 0.1;
+            }
+            this.opacity += (this.targetOpacity - this.opacity) * this.fadeSpeed;
+
+            // Wrap around edges
+            if (this.x < -10) this.x = canvas.width + 10;
+            if (this.x > canvas.width + 10) this.x = -10;
+            if (this.y < -10) this.y = canvas.height + 10;
+            if (this.y > canvas.height + 10) this.y = -10;
+        }
+        draw() {
+            // Outer glow
+            ctx.beginPath();
+            const gradient = ctx.createRadialGradient(
+                this.x, this.y, 0,
+                this.x, this.y, this.glowSize
+            );
+            gradient.addColorStop(0, this.color + (this.opacity * 0.8) + ')');
+            gradient.addColorStop(0.4, this.color + (this.opacity * 0.2) + ')');
+            gradient.addColorStop(1, this.color + '0)');
+            ctx.fillStyle = gradient;
+            ctx.arc(this.x, this.y, this.glowSize, 0, Math.PI * 2);
+            ctx.fill();
+
+            // Core bright dot
+            ctx.beginPath();
+            ctx.fillStyle = this.color + this.opacity + ')';
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.fill();
+        }
+    }
+
+    // Initialize particles
+    for (let i = 0; i < PARTICLE_COUNT; i++) {
+        particles.push(new Particle());
+    }
+
+    function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        for (const p of particles) {
+            p.update();
+            p.draw();
+        }
+        requestAnimationFrame(animate);
+    }
+    animate();
+})();
