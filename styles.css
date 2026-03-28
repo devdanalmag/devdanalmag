@@ -1648,7 +1648,6 @@ body {
 @media (max-width: 600px) {
     :root {
         --page-width: 95vw;
-        /* Slightly smaller to fit spine */
         --page-height: 80vh;
     }
 
@@ -1661,34 +1660,31 @@ body {
 
     .book {
         width: var(--page-width);
-        height: 650px;
+        /* Dynamic height: fill viewport minus space for nav buttons */
+        height: calc(100vh - 100px);
+        height: calc(100dvh - 100px); /* Dynamic viewport height for mobile browsers */
+        max-height: 750px;
         left: -15px;
         margin: auto;
         transform: translateX(15px) !important;
-        /* Offset for spine */
         transition: transform 0.6s ease;
     }
 
     /* Shift book to show Left/Back page */
     .book.view-left {
         transform: translateX(calc(var(--page-width) + 20px)) !important;
-        /* Move right to show left page */
     }
 
     .spiral-spine {
         display: flex;
         left: -25px;
-        /* Position spine between the potential spread */
         width: 50px;
-        /* Wider container for mobile */
         transform: translateZ(0);
         align-items: center;
     }
 
-    /* Adjust rings for mobile */
     .ring {
         width: 17px;
-        /* Smaller rings */
         height: 8px;
     }
 
@@ -1697,37 +1693,228 @@ body {
         width: 15px;
     }
 
-    .project-card {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        background: #fff;
-        padding: 15px;
-        margin-bottom: 5px;
-        border-left: 4px solid var(--gold);
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-        transition: transform 0.2s;
-        cursor: pointer;
+    /* === SCROLLABLE PAGE CONTENT ON MOBILE === */
+    .page-inner {
+        padding: 8px 18px 60px 18px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+        /* Hide scrollbar but keep scrollable */
+        scrollbar-width: none; /* Firefox */
     }
 
-    /* If we are viewing Left (Back Page), the spine is on the Right. */
-    /* The spine div is physically at the left of the container. */
-    /* The Left Page (Back) is rotated -180deg. Its Right edge is near the spine. */
-    /* So the spine element is correct. */
-
-    .page-inner {
-        padding: 10px 20px 30px 20px;
+    .page-inner::-webkit-scrollbar {
+        display: none; /* Chrome/Safari */
     }
 
     .back .page-inner {
-        padding: 10px 20px 30px 20px;
+        padding: 8px 18px 60px 18px;
     }
 
+    /* === COMPACT HEADER ON MOBILE === */
+    .header-deco {
+        margin-bottom: 8px;
+        padding-bottom: 6px;
+    }
+
+    .header-deco h2 {
+        font-size: 1.15rem;
+        letter-spacing: 1.5px;
+    }
+
+    /* === COMPACT PROJECT CARDS === */
+    .projects-list {
+        grid-template-columns: 1fr;
+        gap: 6px;
+    }
+
+    .project-card {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: #fff;
+        padding: 10px 12px;
+        margin-bottom: 0;
+        border-left: 3px solid var(--gold);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        transition: transform 0.2s;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+
+    .p-icon {
+        font-size: 1.2rem;
+        width: 24px;
+        min-width: 24px;
+    }
+
+    .p-info h4 {
+        font-size: 0.8rem;
+        margin-bottom: 2px;
+    }
+
+    .p-info span {
+        font-size: 0.7rem;
+    }
+
+    .project-arrow {
+        font-size: 0.45rem;
+    }
+
+    /* === COMPACT AUTHOR / PROFILE CARD === */
+    .profile-card {
+        padding: 12px;
+        margin-top: 5px;
+    }
+
+    .profile-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .avatar {
+        width: 90px;
+        height: 90px;
+        margin-bottom: 8px;
+    }
+
+    .author-summary {
+        font-size: 0.82rem;
+        line-height: 1.45;
+        margin-top: 5px;
+    }
+
+    .bio-text {
+        font-size: 0.8rem;
+        line-height: 1.4;
+        padding: 6px 8px;
+        margin-top: 6px;
+    }
+
+    /* === COMPACT EXPERIENCE CARDS === */
+    .experience-timeline {
+        gap: 10px;
+        padding: 5px 0;
+    }
+
+    .experience-card {
+        padding: 6px;
+        gap: 10px;
+    }
+
+    .experience-icon-wrapper {
+        width: 34px;
+        height: 34px;
+        min-width: 34px;
+        font-size: 0.9rem;
+    }
+
+    .experience-header h4 {
+        font-size: 0.8rem;
+    }
+
+    .experience-badge {
+        font-size: 0.5rem;
+        padding: 1px 6px;
+    }
+
+    .experience-meta-new {
+        gap: 8px;
+        margin-bottom: 4px;
+    }
+
+    .experience-meta-new span {
+        font-size: 0.6rem;
+    }
+
+    .experience-desc {
+        font-size: 0.72rem;
+        line-height: 1.4;
+        margin-bottom: 5px;
+    }
+
+    .exp-tag {
+        padding: 2px 6px;
+        font-size: 0.58rem;
+    }
+
+    /* === COMPACT SKILLS CARDS === */
+    .skills-showcase {
+        gap: 8px;
+        padding: 5px 0;
+    }
+
+    .skill-card {
+        padding: 8px;
+    }
+
+    .skill-card-header {
+        margin-bottom: 6px;
+        gap: 6px;
+    }
+
+    .skill-icon-wrapper {
+        width: 26px;
+        height: 26px;
+        font-size: 0.8rem;
+    }
+
+    .skill-card-title {
+        font-size: 0.8rem;
+    }
+
+    .skill-chips {
+        gap: 3px;
+    }
+
+    .skill-chip {
+        padding: 2px 6px;
+        font-size: 0.6rem;
+    }
+
+    /* === COMPACT SERVICES === */
+    .services-showcase {
+        gap: 8px;
+        padding: 5px 0;
+    }
+
+    .service-card {
+        padding: 10px 8px;
+    }
+
+    .service-icon-wrapper {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+        margin-bottom: 6px;
+    }
+
+    .service-title {
+        font-size: 0.75rem;
+    }
+
+    .service-desc {
+        font-size: 0.68rem;
+        line-height: 1.4;
+    }
+
+    /* === COMPACT CONTACT === */
+    .contact-item {
+        padding: 8px 12px;
+        margin-bottom: 8px;
+        font-size: 0.85rem;
+        gap: 10px;
+    }
+
+    .contact-item i {
+        font-size: 1.1rem;
+        min-width: 20px;
+    }
+
+    /* === PAGE SURFACES === */
     .front,
     .back {
         width: 100%;
         border-radius: 0 10px 10px 0;
-        /* Rounded outer edge */
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
         border: none;
         border-left: 2px solid #ccc;
@@ -1739,32 +1926,54 @@ body {
         border-right: 2px solid #ccc;
     }
 
+    /* === NAV BUTTONS === */
     .nav-btn {
         top: auto;
-        bottom: 20px;
-        width: 50px;
-        height: 50px;
+        bottom: 15px;
+        width: 46px;
+        height: 46px;
         transform: none;
+        z-index: 1100;
     }
 
     #prev-btn {
-        left: 20px;
+        left: 15px;
     }
 
     #next-btn {
-        right: 20px;
+        right: 15px;
     }
 
+    /* === PAGE NUMBER === */
+    .pg-num {
+        bottom: 8px;
+        font-size: 0.65rem;
+    }
+
+    /* === COVER === */
     .main-title {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 
-    .bio-text {
-        font-size: 1.1rem;
+    .nick-name {
+        font-size: 1.2rem;
     }
 
-    .projects-list {
-        grid-template-columns: 1fr;
+    .cover-badge {
+        font-size: 1rem;
+        margin-bottom: 15px;
+        letter-spacing: 4px;
+    }
+
+    .sub-title {
+        font-size: 0.85rem;
+        letter-spacing: 3px;
+    }
+
+    .cover-frame {
+        width: 85%;
+        height: 85%;
+        padding: 15px;
     }
 
     .skills-grid {
@@ -1774,9 +1983,69 @@ body {
     .skill-category {
         grid-template-columns: 1fr;
     }
+}
 
-    .cover-badge {
-        font-size: 1.2rem;
-        margin-bottom: 30px;
+/* --- EXTRA SMALL PHONES (under 400px width) --- */
+@media (max-width: 400px) {
+    .book {
+        height: calc(100vh - 80px);
+        height: calc(100dvh - 80px);
+    }
+
+    .page-inner {
+        padding: 6px 14px 55px 14px;
+    }
+
+    .back .page-inner {
+        padding: 6px 14px 55px 14px;
+    }
+
+    .header-deco h2 {
+        font-size: 1rem;
+    }
+
+    .project-card {
+        padding: 8px 10px;
+        gap: 8px;
+    }
+
+    .p-info h4 {
+        font-size: 0.72rem;
+    }
+
+    .p-info span {
+        font-size: 0.62rem;
+    }
+
+    .avatar {
+        width: 75px;
+        height: 75px;
+    }
+
+    .profile-card h3 {
+        font-size: 0.95rem;
+    }
+
+    .author-summary {
+        font-size: 0.75rem;
+    }
+
+    .bio-text {
+        font-size: 0.72rem;
+    }
+
+    .main-title {
+        font-size: 1.3rem;
+    }
+
+    .nick-name {
+        font-size: 1rem;
+    }
+
+    .nav-btn {
+        width: 40px;
+        height: 40px;
+        bottom: 10px;
+        font-size: 1.1rem;
     }
 }
