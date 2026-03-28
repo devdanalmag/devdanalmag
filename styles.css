@@ -344,11 +344,12 @@ body {
 }
 
 .header-deco h2 {
+    font-family: 'Playfair Display', 'Cinzel', serif;
     font-size: 1.8rem;
-    letter-spacing: 2px;
+    font-weight: 900;
+    letter-spacing: 3px;
     text-transform: uppercase;
-    background: -webkit-linear-gradient(#3e2723, #8B4513);
-    background: linear-gradient(#3e2723, #8B4513);
+    background: linear-gradient(180deg, #3e2723, #8B4513, #c5a059);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -543,12 +544,20 @@ body {
 /* Profile Page */
 .profile-card {
     text-align: center;
-    background: white;
+    background: linear-gradient(145deg, #ffffff, #fdfbf7);
     padding: 20px;
-    border-radius: 4px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    border: 1px solid #eee;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(197, 160, 89, 0.15);
     margin-top: 10px;
+}
+
+.profile-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--leather);
+    letter-spacing: 1px;
 }
 
 .avatar {
@@ -576,24 +585,27 @@ body {
 
 .bio-text {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1rem;
-    line-height: 1.6;
+    font-size: 0.85rem;
+    font-weight: 600;
+    line-height: 1.5;
     font-style: italic;
-    margin-top: 15px;
-    color: #000000ad;
+    margin-top: 10px;
+    color: #444;
     text-align: center;
-    background: rgba(185, 182, 204, 0.24);
+    background: rgba(197, 160, 89, 0.06);
     border-radius: 10px;
-    border-left: 5px solid var(--gold);
-    font-weight: 200px;
+    border-left: 4px solid var(--gold);
+    padding: 8px 10px;
+    overflow: hidden;
 }
 
 .author-summary {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+    font-family: 'Cormorant Garamond', serif;
     margin-top: 8px;
-    font-size: 0.9rem;
-    line-height: 1.5;
-    color: #282727;
+    font-size: 0.95rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #333;
     text-align: justify;
 }
 
@@ -651,15 +663,20 @@ body {
 }
 
 .p-info h4 {
+    font-family: 'Playfair Display', serif;
     margin-bottom: 3px;
-    font-size: 1rem;
-    color: #333;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--leather);
+    letter-spacing: 0.3px;
 }
 
 .p-info span {
+    font-family: 'Cormorant Garamond', serif;
     font-size: 0.8rem;
-    color: #777;
+    color: #888;
     font-style: italic;
+    font-weight: 600;
 }
 
 .project-arrow {
@@ -759,11 +776,12 @@ body {
 }
 
 .experience-header h4 {
-    font-family: 'Cinzel', serif;
+    font-family: 'Playfair Display', 'Cinzel', serif;
     font-size: 0.9rem;
     color: var(--leather);
     margin: 0;
     font-weight: 700;
+    letter-spacing: 0.3px;
 }
 
 .experience-badge {
@@ -799,8 +817,10 @@ body {
 }
 
 .experience-desc {
-    font-size: 0.78rem;
-    line-height: 1.5;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.82rem;
+    font-weight: 400;
+    line-height: 1.55;
     color: #555;
     margin: 0 0 8px 0;
 }
@@ -814,8 +834,10 @@ body {
 .exp-tag {
     display: inline-block;
     padding: 3px 8px;
+    font-family: 'Lato', sans-serif;
     font-size: 0.65rem;
-    font-weight: 600;
+    font-weight: 700;
+    letter-spacing: 0.3px;
     background: linear-gradient(145deg, #f8f6f3, #edeae5);
     color: #666;
     border-radius: 12px;
@@ -939,18 +961,20 @@ body {
 }
 
 .service-title {
-    font-family: 'Cinzel', serif;
+    font-family: 'Playfair Display', 'Cinzel', serif;
     font-size: 0.85rem;
     font-weight: 700;
     color: var(--leather);
     margin: 0 0 6px 0;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.5px;
 }
 
 .service-desc {
-    font-size: 0.72rem;
-    line-height: 1.45;
-    color: #666;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.78rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #555;
     margin: 0;
 }
 
@@ -1313,11 +1337,11 @@ body {
 }
 
 .skill-card-title {
-    font-family: 'Cinzel', serif;
+    font-family: 'Playfair Display', 'Cinzel', serif;
     font-size: 0.95rem;
     font-weight: 700;
     color: var(--leather);
-    letter-spacing: 0.5px;
+    letter-spacing: 0.8px;
     text-transform: uppercase;
     margin: 0;
 }
@@ -1476,7 +1500,9 @@ body {
     display: flex;
     align-items: center;
     gap: 15px;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 1rem;
+    font-weight: 600;
     margin-bottom: 15px;
     padding: 12px 16px;
     background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(250, 248, 245, 0.8));
@@ -1530,9 +1556,11 @@ body {
     bottom: 20px;
     width: 100%;
     text-align: center;
-    font-family: 'Cinzel', serif;
+    font-family: 'Bodoni Moda', 'Cinzel', serif;
     font-size: 0.8rem;
-    color: #999;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: #aaa;
 }
 
 
