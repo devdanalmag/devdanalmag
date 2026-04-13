@@ -28,7 +28,7 @@ const projectInfo = {
         stack: "React • Tailwind • TypeScript • Web3.js",
         image: "img/projects/hashswap.png",
         likes: "132 likes",
-        demoLink: "#"
+        demoLink: "https://hedera-swap-ui.vercel.app/"
     },
     "onchainng": {
         title: "Onchain NG",
